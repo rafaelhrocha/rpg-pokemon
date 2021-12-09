@@ -1,9 +1,6 @@
 body {
     margin: 0px;
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 42px;
 }
-
 
 
 .area {
@@ -13,8 +10,20 @@ body {
     background: #f8f8f8;
 
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ball{
+    display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+    width: 40rem;
+    height: 20rem;
+    border: 2px solid black;
+
 }
 
 .shadow-ball {
@@ -30,8 +39,9 @@ body {
 
 .top-ball {
     position: absolute;
-    width: 20rem;
-    height: 10rem;
+    top: 0%;
+    width: 50%;
+    height: 50%;
     border-radius: 225px 225px 0px 0px;
     background-color: red;
     animation: treme 1.5s infinite;
@@ -63,10 +73,10 @@ body {
 }
 
 .bottom-ball {
-    top: 60%;
+    top: 50%;
     position: absolute;
-    width: 20rem;
-    height: 10rem;
+    width: 50%;
+    height: 50%;
     border-radius: 0px 0px 225px 225px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .9);
     background-color: white;
