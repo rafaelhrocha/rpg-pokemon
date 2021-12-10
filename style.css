@@ -12,6 +12,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #686868;
 }
 
 .ball{
@@ -20,10 +21,10 @@ body {
     align-items: center;
 
     position: relative;
+    top: 15%;
     width: 40rem;
     height: 20rem;
-    border: 2px solid black;
-
+    z-index: 1;
 }
 
 .shadow-ball {
@@ -32,20 +33,21 @@ body {
     height: 10rem;
     width: 30rem;
     border-radius: 50%;
-    z-index: 0;
-    background: radial-gradient(closest-side, #000000, #797979, #ffffff);
+    background: radial-gradient(closest-side, #FFFF, #797979, #000000);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .9);
+    z-index: 0;
 }
 
 .top-ball {
     position: absolute;
     top: 0%;
-    width: 50%;
-    height: 50%;
+    width: 20rem;
+    height: 10rem;
     border-radius: 225px 225px 0px 0px;
-    background-color: red;
-    animation: treme 1.5s infinite;
-    z-index: 1;
+    background-color:  #ee3d3d;
+    animation: treme 1.5s infinite 5s;
+    animation: bounce 2s 2 alternate;
+    z-index: 2;
 }
 
 .top-ball-light-1{
@@ -75,13 +77,13 @@ body {
 .bottom-ball {
     top: 50%;
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 20rem;
+    height: 10rem;
     border-radius: 0px 0px 225px 225px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .9);
     background-color: white;
-    animation: treme 1.5s infinite;
-
+    animation: treme 1.5s infinite 5s;
+    animation: bounce 2s 2 alternate;
 }
 
 .curve-ball {
@@ -94,22 +96,23 @@ body {
     width: 20rem;
     height: 7rem;
     border-radius: 150%;
-    background-color: red;
+    background-color: #ee3d3d;
     border-bottom-width: 1.4rem;
     border-bottom-style: solid;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .9);
 }
 
 .button-active {
-    top: 65%;
+    top: 78%;
     position: absolute;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     background-color: white;
-    border: 1.5rem solid black;
+    border: 1rem solid black;
     border-radius: 100%;
     box-shadow: 0 2px 4px 0 rgba(231, 224, 224);
-    animation: treme 1.5s infinite;
+    /* animation: treme 1.5s infinite 5s;
+    animation: bounce 3s 2; */
     z-index: 3;
 
 }
@@ -119,9 +122,10 @@ body {
     border-radius: 100%;
     width: 100%;
     height: 100%;
-    animation: changeBackgroundColor 1s infinite;
+    animation: changeBackgroundColor 1s infinite 5s;
     z-index: 4;
 }
+
 
 
 
@@ -160,3 +164,12 @@ body {
         margin-left: 0;
     }
 }
+
+@keyframes bounce {
+    from {
+      transform: translateY(-400%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
