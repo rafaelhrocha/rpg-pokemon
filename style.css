@@ -15,7 +15,7 @@ body {
     background-color: #686868;
 }
 
-.ball{
+.area-ball{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,15 +27,11 @@ body {
     z-index: 1;
 }
 
-.shadow-ball {
-    top: 70%;
-    position: absolute;
-    height: 10rem;
-    width: 30rem;
-    border-radius: 50%;
-    background: radial-gradient(closest-side, #FFFF, #797979, #000000);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .9);
-    z-index: 0;
+.ball{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: treme 1.5s infinite;
 }
 
 .top-ball {
@@ -43,9 +39,12 @@ body {
     top: 0%;
     width: 20rem;
     height: 10rem;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width:  0.1rem;
     border-radius: 225px 225px 0px 0px;
     background-color:  #ee3d3d;
-    animation: treme 1.5s infinite;
     z-index: 2;
 }
 
@@ -59,6 +58,7 @@ body {
     border-radius: 100%;
     opacity: 25%;
     transform: rotate(145deg);
+    z-index: 3;
 }
 
 .top-ball-light-2{
@@ -71,6 +71,7 @@ body {
     border-radius: 100%;
     opacity: 25%;
     transform: rotate(145deg);
+    z-index: 3;
 }
 
 .bottom-ball {
@@ -81,7 +82,7 @@ body {
     border-radius: 0px 0px 225px 225px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .9);
     background-color: white;
-    animation: treme 1.5s infinite;
+    z-index: 2;
 }
 
 .curve-ball {
@@ -98,6 +99,7 @@ body {
     border-bottom-width: 1.4rem;
     border-bottom-style: solid;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .9);
+    z-index: 0;
 }
 
 .button-active {
@@ -121,6 +123,29 @@ body {
     height: 100%;
     animation: changeBackgroundColor 1s infinite;
     z-index: 4;
+}
+
+.shadow-ball{
+    position: absolute;
+    z-index: 5;
+    width: 17rem;
+    height: 20rem;
+    border-radius: 100%;
+    border-left-style: solid;
+    border-left-width: 2.9rem;
+    border-left-color: black;
+    opacity: 20%;
+}
+
+.shadow-floor {
+    top: 70%;
+    position: absolute;
+    height: 10rem;
+    width: 30rem;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, #FFFF, #797979, #000000);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .9);
+    z-index: 0;
 }
 
 
@@ -161,3 +186,4 @@ body {
         margin-left: 0;
     }
 }
+
