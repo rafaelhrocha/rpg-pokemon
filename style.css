@@ -82,7 +82,7 @@ body {
     border-radius: 0px 0px 225px 225px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .9);
     background-color: white;
-    z-index: 2;
+    z-index: 1;
 }
 
 .curve-ball {
@@ -132,7 +132,7 @@ body {
     height: 20rem;
     border-radius: 100%;
     border-left-style: solid;
-    border-left-width: 2.9rem;
+    border-left-width: 3rem;
     border-left-color: black;
     opacity: 20%;
 }
