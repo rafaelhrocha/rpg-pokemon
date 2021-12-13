@@ -92,13 +92,14 @@ main{
     width: 40rem;
     height: 20rem;
     z-index: 1;
+    animation: bounce 1s 0s alternate;
+    -webkit-animation: bounce 1s 0s alternate;
 }
 
 .ball{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* animation: treme 1.5s infinite; */
 }
 
 .top-ball {
@@ -178,7 +179,6 @@ main{
     border: 1rem solid black;
     border-radius: 100%;
     box-shadow: 0 2px 4px 0 rgba(231, 224, 224);
-    /* animation: treme 1.5s infinite; */
     z-index: 3;
 
 }
@@ -188,7 +188,7 @@ main{
     border-radius: 100%;
     width: 100%;
     height: 100%;
-    /* animation: changeBackgroundColor 1s infinite; */
+    /* animation: changeLightColor 1s infinite; */
     z-index: 4;
 }
 
@@ -215,10 +215,15 @@ main{
     z-index: 0;
 }
 
+.treme{
+    animation: treme 1.5s infinite 2s;
+}
 
+.change-light-color{
+    animation: changeLightColor 1s infinite 2s;
+}
 
-
-@keyframes changeBackgroundColor {
+@keyframes changeLightColor {
     0% {
         background-color: white;
     }
@@ -254,3 +259,20 @@ main{
     }
 }
 
+@keyframes bounce {
+    from {
+        transform: translateY(-90vh);
+      }
+      to {
+        transform: translateY(0);
+      }
+}
+
+@-webkit-keyframes bounce {
+    from {
+      transform: translateY(-90vh);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
